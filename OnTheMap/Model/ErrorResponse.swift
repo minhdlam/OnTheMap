@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct ErrorResponse: Codable, Error {
+    let statusCode: Int
+    let statusMessage: String
+    
+    enum CodingKeys: String, CodingKey {
+        case statusCode = "status"
+        case statusMessage = "error"
+    }
+}

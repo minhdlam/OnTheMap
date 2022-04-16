@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct AllStudentsLocationResponse: Codable {
+    var results: [StudentLocationResponse]
+}
